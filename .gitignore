@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+
+reference-model/__pycache__/
+reference-model/output/
+reference-model/test.dwg
+reference-model/test.pdf
+reference-model/test.png
+
+.vscode/
+.DS_Store
