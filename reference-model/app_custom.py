@@ -1,8 +1,10 @@
+from PIL import Image
 import base64
 import io
 import requests
 import streamlit as st
-import PIL
+import PIL 
+from PIL import Image
 import helper
 import setting
 
@@ -45,7 +47,7 @@ def main():
                 uploaded_image = source_img
 
             else:
-                uploaded_image = PIL.Image.open(source_img)
+                uploaded_image = Image.open(source_img)
                 st.image(
                     uploaded_image,
                     caption="Uploaded Image",
@@ -126,7 +128,7 @@ def main():
             image_bytes = base64.b64decode(
                 api_result["annotated_image"]
             )
-            res_plotted = PIL.Image.open(
+            res_plotted = Image.open (
                 io.BytesIO(image_bytes)
             )
 
